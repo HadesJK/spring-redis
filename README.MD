@@ -68,3 +68,22 @@
 | ZSetOperations  | Redis zset (or sorted set) operations  |
 | HashOperations  | Redis hash operations  |
 | HyperLogLogOperations  | Redis HyperLogLog operations like (pfadd, pfcount,…​)|
+
+**java**
+
+```
+public class SpringRedis {
+    @Autowired
+    private RedisTemplate<String, String> template;
+
+    @Resource(name = "redisTemplate")
+    private ListOperations<String, Object> listOps;
+
+    @Resource(name = "redisTemplate")
+    private ValueOperations valueOps;
+
+    @Resource(name = "redisTemplate")
+    private HashOperations<String, String, String> hashOps;
+
+}
+```
