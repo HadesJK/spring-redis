@@ -22,4 +22,11 @@ public class StuService {
         System.out.println("this will not execute: get stu in redis and db");
         return "111";
     }
+
+//    @Cacheable(value = "stu.custom", key = "'stu.' + #id")
+//    public Stu get(int id) {
+//        System.out.println(id);
+//        System.out.println("this will not execute: get stu in redis and db");
+//        return new Stu(id, "jql", 27);
+//    }
 }
